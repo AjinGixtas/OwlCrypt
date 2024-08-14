@@ -1,5 +1,5 @@
 from math import cos, pi
 def execute(image, data, code, args):
-    context = { 'img' : image, 'data' : data, 'args' : args}
-    exec(code, {}, context)
+    context = { 'image' : image, 'data' : data, 'args' : args, 'output' : None }
+    exec(code, context)
     return context['output']
